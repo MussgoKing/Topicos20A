@@ -29,15 +29,17 @@
                 <td>{{$producto->marca}}</td>
                 <td>{{$producto->precio}}</td>
                 <td>{{$producto->stock}}</td>
-                <td><a class="btn btn-primary btn-xs" href="{{action('ProductController@edit', $producto->id)}}" ><span class="glyphicon glyphicon-pencil"></span></a></td>
-                <td>
-                  <form action="{{action('ProductController@destroy', $producto->id)}}" method="post">
-                   {{csrf_field()}}
-                   <input name="_method" type="hidden" value="DELETE">
- 
-                   <button class="btn btn-danger btn-xs" type="submit"><span class="glyphicon glyphicon-trash"></span></button>
-                 </td>
-               </tr>
+                @auth
+                  <td><a class="btn btn-primary btn-xs" href="{{action('ProductController@edit', $producto->id)}}" ><span class="glyphicon glyphicon-pencil"></span></a></td>
+                  <td>
+                    <form action="{{action('ProductController@destroy', $producto->id)}}" method="post">
+                    {{csrf_field()}}
+                    <input name="_method" type="hidden" value="DELETE">
+  
+                    <button class="btn btn-danger btn-xs" type="submit"><span class="glyphicon glyphicon-trash"></span></button>
+                  </td>
+                </tr>
+               @endauth
                @endforeach 
                @else
                <tr>
