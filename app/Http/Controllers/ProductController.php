@@ -13,6 +13,12 @@ class ProductController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    public function __construct()
+    {
+        $this->middleware('auth')->only('create');
+        $this->middleware('auth')->only('edit');
+        $this->middleware('auth')->only('destroy');
+    }
     public function index()
     {
         $productos=Producto::all();

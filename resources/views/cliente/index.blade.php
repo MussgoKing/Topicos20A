@@ -1,12 +1,11 @@
 @extends('users.layout')
 @section('content')
-@section('header', 'Reporte de Clientes')
+@section('header', 'Lista Clientes')
 <div class="row">
   <section class="content">
     <div class="col-md-8 col-md-offset-2">
       <div class="panel panel-default">
         <div class="panel-body">
-          <div class="pull-left"><h3>Lista Clientes</h3></div>
           <div class="pull-right">
             <div class="btn-group">
               <a href="{{ route('cliente.create') }}" class="btn btn-info" >Añadir Cliente</a>

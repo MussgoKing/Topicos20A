@@ -1,12 +1,11 @@
 @extends('users.layout')
 @section('content')
-@section('header', 'Reporte de Productos')
+@section('header', 'Lista de Productos')
 <div class="row">
   <section class="content">
     <div class="col-md-8 col-md-offset-2">
       <div class="panel panel-default">
         <div class="panel-body">
-          <div class="pull-left"><h3>Lista de Productos</h3></div>
           <div class="pull-right">
             <div class="btn-group">
               <a href="{{ route('producto.create') }}" class="btn btn-info" >Añadir Producto</a>

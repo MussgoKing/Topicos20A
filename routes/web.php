@@ -26,7 +26,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 Clientes */
 Route::get('clientes', 'ClientesController@index')
          ->name('cliente.create');//con este llamas en la vista
-Route::resource('cliente', 'ClientesController');
+Route::resource('cliente', 'ClientesController')->middleware('auth');
 
 Route::get('clientes/create', 'ClientesController@create');
 //Productos
