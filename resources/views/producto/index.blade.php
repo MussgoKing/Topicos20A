@@ -29,7 +29,6 @@
                 <td>{{$producto->marca}}</td>
                 <td>{{$producto->precio}}</td>
                 <td>{{$producto->stock}}</td>
-                @auth
                   <td><a class="btn btn-primary btn-xs" href="{{action('ProductController@edit', $producto->id)}}" ><span class="glyphicon glyphicon-pencil"></span></a></td>
                   <td>
                     <form action="{{action('ProductController@destroy', $producto->id)}}" method="post">
@@ -39,7 +38,6 @@
                     <button class="btn btn-danger btn-xs" type="submit"><span class="glyphicon glyphicon-trash"></span></button>
                   </td>
                 </tr>
-               @endauth
                @endforeach 
                @else
                <tr>
