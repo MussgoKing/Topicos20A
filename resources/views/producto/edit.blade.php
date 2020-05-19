@@ -30,10 +30,11 @@
 							{{ csrf_field() }}
 							<input name="_method" type="hidden" value="PATCH">
 							<div class="row">
-								<div class="form-group">
-									<textarea name="descripcion" class="form-control input-sm"  placeholder="Descripción">{{$productos->descripcion}}</textarea>
+								<div class="col-xs-6 col-sm-6 col-md-6">
+									<div class="form-group">
+										<input type="text" name="descripcion" id="descripcion" class="form-control input-sm" value="{{$productos->descripcion}}">
+									</div>
 								</div>
-								<div class="row">
 								<div class="col-xs-6 col-sm-6 col-md-6">
 									<div class="form-group">
 										<input type="text" name="marca" id="marca" class="form-control input-sm" value="{{$productos->marca}}">
@@ -46,7 +47,7 @@
 								</div>
 								<div class="col-xs-6 col-sm-6 col-md-6">
 									<div class="form-group">
-										<input type="number" step="0" name="stock" id="stock" class="form-control input-sm" value="{{$productos->stock}}">
+										<input type="number" step="0" id="stock" name="stock" class="form-control input-sm" value="{{$productos->stock}}">
 									</div>
 								</div>
 							</div>
