@@ -75,8 +75,8 @@
                     @endauth
                 </div>
                 <div class="links">
-                    <a href="https://laravel.com/docs">Watch this on Github</a>
-                    <a href="https://laracasts.com">My Twitter</a>
+                    <a href="https://github.com/MussgoKing/Topicos20A">Watch this on Github</a>
+                    <a href="https://twitter.com/Set_Martinez">My Twitter</a>
                 </div>
             </div>
         </div>
