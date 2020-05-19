@@ -70,9 +70,10 @@
         <div class="flex-top position-ref full-height">
             <div class="content">
                 <div class="title m-b-md">
+                    @auth
                     Hello {{ Auth::user()->name }}
+                    @endauth
                 </div>
-
                 <div class="links">
                     <a href="https://laravel.com/docs">Watch this on Github</a>
                     <a href="https://laracasts.com">My Twitter</a>
